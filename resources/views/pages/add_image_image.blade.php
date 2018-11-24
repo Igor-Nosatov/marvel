@@ -12,7 +12,7 @@
                @csrf 
     <div class="d-flex flex-row">
          <div class="p-2">
-         	<input type="hidden" name="hero_id">
+         	<input type="hidden" name="hero_id" value={{$heroes->id}}>
             <div class="form-group">
               <label for="images">Image</label>
               <input type="file" class="form-control-file" name="images" id="images">
@@ -25,13 +25,6 @@
          </div>
     </div>
     </form>
-
-
-
-
-
-
-
   </div>
  </div>
 </div>
