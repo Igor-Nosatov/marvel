@@ -4,8 +4,6 @@
 <div class="container-fluid mt-4 mb-7">
   <div class="row">
   <div class="col-md-12">
-
-
   @foreach
   <form action="{{route('image.save')}}" 
               method="post" enctype="multipart/form-data">  
