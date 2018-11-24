@@ -4,28 +4,25 @@
 <div class="container-fluid mt-4 mb-7">
 <div class="row">
   <div class="col-md-3">
-                 @if ($heroes->image_id === null)
-                     You don't have image please add !
-
-                 @else
-  	<img class="img-fluid hero-image" src="{{asset($heroes->image->name)}}" alt="Card image cap">
-                 @endif
+              
+    <img class="img-fluid hero-image" src="{{asset($heroes->image->name)}}" alt="Card image cap">
+              
   </div>
   <div class="col-md-9">
-  	<div class="d-flex flex-column bd-highlight mb-3">
+    <div class="d-flex flex-column bd-highlight mb-3">
      <div class="p-2 bd-highlight">
-     	<span class="font-weight-bold">Nick name:</span> {{$heroes->nick}}</div>
+      <span class="font-weight-bold">Nick name:</span> {{$heroes->nick}}</div>
      <div class="p-2 bd-highlight">
-     	<span class="font-weight-bold">Real name: </span>{{$heroes->real_name​}}</div>
+      <span class="font-weight-bold">Real name: </span>{{$heroes->real_name​}}</div>
      <div class="p-2 bd-highlight">
-     	<span class="font-weight-bold">Description:</span> {{$heroes->origin_description​}}
+      <span class="font-weight-bold">Description:</span> {{$heroes->origin_description​}}
      </div>
      <div class="p-2 bd-highlight">
-     	<span class="font-weight-bold">Superpowers:</span>
-     	{{$heroes->superpowers}}</div>
+      <span class="font-weight-bold">Superpowers:</span>
+      {{$heroes->superpowers}}</div>
      <div class="p-2 bd-highlight">
-     	<span class="font-weight-bold">Catch phrase:</span>
-     	"{{$heroes->catch_phrase}}."</div>
+      <span class="font-weight-bold">Catch phrase:</span>
+      "{{$heroes->catch_phrase}}."</div>
    </div>
   </div>
 </div>

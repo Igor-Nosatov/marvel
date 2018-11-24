@@ -17,6 +17,7 @@ Route::post('/hero_update/{hero}','SuperHeroController@update')->name('hero.upda
 Route::delete('/hero_delete/{id}', 
 	'SuperHeroController@destroy')->name('hero.destroy');
 
+Route::get('/image_add', 'SuperHeroController@image_add')->name('image.add');
 Route::post('/image_save',
 	'SuperHeroController@image_save')->name('image.save');
 

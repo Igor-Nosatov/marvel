@@ -32,6 +32,9 @@
       <li class="nav-item">
         <a class="nav-link" href="{{route('hero.create')}}">Add new Heroes</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{route('hero.create')}}">Add Image Hero</a>
+      </li>
     </ul>
   </div>
 </nav>

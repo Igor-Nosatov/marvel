@@ -20,9 +20,6 @@ class CreateSuperHeroTable extends Migration
             $table->text('origin_description​')->nullable();
             $table->text('superpowers')->nullable();
             $table->string('catch_phrase')->nullable();
-            $table->unsignedInteger('image_id')->nullable();
-            $table->foreign('image_id')->references('id')
-            ->on('heroes')->onDelete('cascade');
             $table->timestamps();
         });
 

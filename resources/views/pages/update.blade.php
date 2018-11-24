@@ -52,23 +52,7 @@
   </div>
   <div class="col-md-6">
 
-  <form action="{{route('image.save')}}" 
-              method="post" enctype="multipart/form-data">  
-               @csrf 
-    <div class="d-flex flex-row">
-         <div class="p-2">
-            <div class="form-group">
-              <label for="images">Image</label>
-              <input type="file" class="form-control-file" name="images" id="images">
-            </div>
-         </div>
-    </div>
-    <div class="d-flex flex-row">
-         <div class="p-2">
-            <button type="submit" class="btn btn-success">Add</button>
-         </div>
-    </div>
-    </form>
+
   </div>
  </div>
 </div>

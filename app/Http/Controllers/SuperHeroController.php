@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Hero;
 use App\Image;
 
@@ -10,20 +11,27 @@ class SuperHeroController extends Controller
 {
     public function index()
     {
-      $heroes = Hero::with('image')->paginate(5);
+      //$heroes = Hero::with('image')
+      //->where('hero_id', '=', 'id')->latest()->get();
+     
+     $heroes = DB::table('heroes')
+            ->join('image', 'heroes.id', '=', 'image.hero_id')
+            ->select('heroes.*', 'image.name')
+            ->paginate(5);
+
 
       return view('pages.index', compact(['heroes']));
     }
 
     public function show($id)
     {
-        $heroes = Hero::with('image')->findOrFail($id);
-
+        
+         $heroes = Hero::with(['image'])->findOrFail($id);
         return view('pages.show', compact(['heroes']));
     }
 
     public function create()
-    {
+    {  
        return view('pages.create');
     }
 

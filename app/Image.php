@@ -12,6 +12,6 @@ class Image extends Model
 
     public function hero()
     {
-    	return $this->belongsTo('App\Hero');
+    	return $this->belongsTo('App\Hero','hero_id');
     }
 }

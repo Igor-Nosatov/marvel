@@ -17,8 +17,7 @@ class HeroSeeder extends Seeder
             'origin_description​' => 'The king of the African nation of Wakanda, who gains enhanced strength by ingesting the heart-shaped herb',
              'superpowers' => '​solar energy absorption and healing factor, solar flare and heat vision,
                 solar invulnerability, flight',
-                'catch_phrase' => 'Truth, Justice and the American Way.',
-            'image_id' => '1'
+                'catch_phrase' => 'Truth, Justice and the American Way.'
         ]);
         DB::table('heroes')->insert([
             'nick' => 'Superman',
@@ -30,8 +29,7 @@ class HeroSeeder extends Seeder
             'superpowers' => '​solar energy absorption and healing factor, solar flare and heat vision,
                 solar invulnerability, flight',
 
-            'catch_phrase' => 'Truth, Justice and the American Way.',
-            'image_id' => '2'
+            'catch_phrase' => 'Truth, Justice and the American Way.'
         ]);
         DB::table('heroes')->insert([
             'nick' => 'Incredible Hulk',
@@ -40,8 +38,7 @@ class HeroSeeder extends Seeder
 
             'superpowers' => 'With super-powered muscles all over his body, the Hulk is able to do all sorts of things that regular humans can only dream of. This includes his ability to casually travel miles in a single jump – thanks to his leg muscles - which the Hulk often uses as his main method of transportation. When he’s really trying, however, the Hulk can leap into the Earth’s atmosphere or even travel across oceans and land on different continents.',
 
-            'catch_phrase' => 'You wouldn’t like me when I’m angry.',
-            'image_id' => '3'
+            'catch_phrase' => 'You wouldn’t like me when I’m angry.'
         ]);
         DB::table('heroes')->insert([
             'nick' => 'Wonder Woman',
@@ -51,8 +48,7 @@ class HeroSeeder extends Seeder
 
             'superpowers' => 'Lasso of Truth, Tiara, and her bracelets which protects her from sharp objects and project force fields which can block energy attacks. Sometimes has a sword and shield made by Hephaestus.',
 
-            'catch_phrase' => 'I am Diana, princess of the Amazons',
-            'image_id' => '4'
+            'catch_phrase' => 'I am Diana, princess of the Amazons'
         ]);
         DB::table('heroes')->insert([
             'nick' => 'Batman',
@@ -62,8 +58,7 @@ class HeroSeeder extends Seeder
 
             'superpowers' => 'After consuming the pill, Batman’s tensile and muscle strength increases by several thousand times their normal strength, giving him super strength and durability. ',
 
-            'catch_phrase' => 'Criminals are a cowardly, superstitous lot. ',
-            'image_id' => '5'
+            'catch_phrase' => 'Criminals are a cowardly, superstitous lot. '
         ]);
         DB::table('heroes')->insert([
             'nick' => 'Wolverine',
@@ -73,8 +68,7 @@ class HeroSeeder extends Seeder
 
             'superpowers' => 'Thanks to his increased healing factor Wolverine’s muscles don’t tire or wear down, and his body is resistant to the toxins that a body produces when overworked. That means that Wolverine has the stamina necessary to exert himself at superhuman levels for hours on end. Add to that the fact that Wolverine’s agility, reflexes, and athletic skills are enhanced well-beyond even the most adept superheroes, and what you have is a badass fighter that you most definitely shouldn’t pick a fight with.',
 
-            'catch_phrase' => 'I’m the best I am at what I do.',
-            'image_id' => '6'
+            'catch_phrase' => 'I’m the best I am at what I do.'
         ]);
         DB::table('heroes')->insert([
             'nick' => 'Thor',
@@ -84,8 +78,7 @@ class HeroSeeder extends Seeder
 
             'superpowers' => 'In addition to his immunity, Thor is virtually invulnerable. Not only is his skin is impenetrable to human weaponry and tools, but he also has flown into the center of the Sun (as well as other stars), withstood the weight of planets, resisted blasts from Odin, Celestials, and the Asgardian weapon Destroyer, and has survived - unscathed - the blast from the Doomsday Bomb. By the sound of it, Thor is a god who seemingly cannot be harmed. But the fact of the matter is, he can; it just takes a lot of power - or magic.',
 
-            'catch_phrase' => 'Odin’s beard',
-            'image_id' => '7'
+            'catch_phrase' => 'Odin’s beard'
         ]);
         DB::table('heroes')->insert([
             'nick' => 'Captain Marvel',
@@ -95,8 +88,7 @@ class HeroSeeder extends Seeder
 
             'superpowers' => 'S - for the wisdom of Solomon H - for the strength of Hercules A - for the stamina of Atlas Z - for the power of Zeus (which enhances all Marvels other physical abilities and allows for interdimensional travel) A - for the courage of Achilles (which would include invulnerability from ancient mythology) M - for the speed of Mercury (and, by extension, the power to fly)',
 
-            'catch_phrase' => 'Shazam.',
-            'image_id' => '8'
+            'catch_phrase' => 'Shazam.'
         ]);
 
         DB::table('heroes')->insert([
@@ -108,8 +100,7 @@ class HeroSeeder extends Seeder
 
             'superpowers' => "The Green Lantern power ring isn't just a hunk of metal. It's actually a powerful object with dimensions that go beyond time and space, and abilities that are almost limitless. The best example of that came from the Green Lantern Kilowog, when he used his ring to preserve the population of his entire planet.",
 
-            'catch_phrase' => 'The Emerald Crusader.',
-            'image_id' => '9'
+            'catch_phrase' => 'The Emerald Crusader.'
            
         ]);
 
@@ -121,8 +112,7 @@ class HeroSeeder extends Seeder
 
             'superpowers' => "The web-head’s strength is appropriately proportional to an actual spider's, meaning that he can lift somewhere around 10 tons. While that’s certainly nothing to laugh at, in the aforementioned story arc, The Queen, Spidey’s strength was doubled, allowing him to lift over 20 tons. So while there’s no doubting that our favorite web-slinger is stronger than most would assume, it just isn’t that exciting. Especially because he never dominates his enemies by force, but rather by using intelligence and athleticism. ",
             
-            'catch_phrase' => 'With great power comes great responsibilty.',
-            'image_id' => '10'
+            'catch_phrase' => 'With great power comes great responsibilty.'
            
         ]);
     }
