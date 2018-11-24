@@ -50,7 +50,16 @@ class SuperHeroController extends Controller
            'superpowers' => $superpowers,
             'catch_phrase' =>$catch_phrase]
         );
-         return redirect()->back();
+         return redirect(route('image.add');
+    }
+                         
+   public function image_add()
+    {  
+        $heroes = DB::table('heroes')
+                ->latest()
+                ->first()
+                 ->take(1);
+       return view('pages.create'compact('heroes', compact(['heroes']);
     }
 
     public function image_save(Request $request) {
@@ -93,7 +102,7 @@ class SuperHeroController extends Controller
             'catch_phrase' => 'required'
       ]);
 
-      $hero = Hero::find($id);
+      $hero = Hero::with('image')->find($id);
       $hero->nick = $request->get('nick');
       $hero->real_name = $request->get('real_name');
       $hero->origin_description = $request->get('origin_description');
