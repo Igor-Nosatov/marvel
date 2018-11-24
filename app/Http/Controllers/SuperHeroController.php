@@ -11,9 +11,7 @@ class SuperHeroController extends Controller
 {
     public function index()
     {
-      //$heroes = Hero::with('image')
-      //->where('hero_id', '=', 'id')->latest()->get();
-     
+
      $heroes = DB::table('heroes')
             ->join('image', 'heroes.id', '=', 'image.hero_id')
             ->select('heroes.*', 'image.name')
@@ -85,23 +83,6 @@ class SuperHeroController extends Controller
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     public function edit($id)
     {
 
@@ -116,24 +97,20 @@ class SuperHeroController extends Controller
             'real_name​' => 'required',
             'origin_description​' => 'required',
             'superpowers' => 'required',
-            'catch_phrase' => 'required',
-            'images' => 'image'
+            'catch_phrase' => 'required'
       ]);
 
       $hero = Hero::find($id);
-      $share->nick = $request->get('nick');
-      $share->real_name​ = $request->get('real_name​');
-      $share->origin_description​ = $request->get('origin_description​');
-      $share->superpowers = $request->get('superpowers');
-      $share->catch_phrase = $request->get('catch_phrase');
-      $share->images = $request->get('images');
-      $share->save();
+      $hero->nick = $request->get('nick');
+      $hero->real_name​ = $request->get('real_name​');
+      $hero->origin_description​ = $request->get('origin_description​');
+      $hero->superpowers = $request->get('superpowers');
+      $hero->catch_phrase = $request->get('catch_phrase');
+      $hero->save();
 
       return redirect(route('heroes'));
-}
+      }
 
-
-    
     public function destroy($id)
     {   
         $hero = Hero::with('image')->find($id);
@@ -144,7 +121,7 @@ class SuperHeroController extends Controller
     public function image_destroy($id)
     {   
         $hero = Image::with('image')->find($id);
-        $hero->delete();
+        $hero->destroy();
         return redirect()->back();
     }
 
