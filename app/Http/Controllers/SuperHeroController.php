@@ -59,7 +59,7 @@ class SuperHeroController extends Controller
                 ->latest()
                 ->first()
                  ->take(1);
-       return view('pages.create'compact('heroes', compact(['heroes']);
+       return view('pages.add_image_image',compact(['heroes']);
     }
 
     public function image_save(Request $request) {
