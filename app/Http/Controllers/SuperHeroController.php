@@ -59,7 +59,8 @@ class SuperHeroController extends Controller
             'hero_id'  =>'required',
             'images' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
         ]);
-       
+        
+        $hero_id = $request['hero_id'];
         $images = $request['images'];
         if($request->hasFile('images')){
                 $file = $request->file('images');
@@ -69,17 +70,16 @@ class SuperHeroController extends Controller
             }
 
         $cart_model = Image::create(
-           [
+           ['hero_id' =>$hero_id,
             'name' =>$path]
         );
-         return redirect()->back();
+         return redirect(route('heroes'));
     }
 
 
     public function edit($id)
     {
-
-       $heroes = Hero::find($id);
+       $heroes = Hero::with('image')->find($id);
         return view('pages.update',compact('heroes'));
     }
 
@@ -87,16 +87,16 @@ class SuperHeroController extends Controller
 {
       $request->validate([
             'nick'  =>'required',
-            'real_name​' => 'required',
-            'origin_description​' => 'required',
+            'real_name' => 'required',
+            'origin_description' => 'required',
             'superpowers' => 'required',
             'catch_phrase' => 'required'
       ]);
 
       $hero = Hero::find($id);
       $hero->nick = $request->get('nick');
-      $hero->real_name​ = $request->get('real_name​');
-      $hero->origin_description​ = $request->get('origin_description​');
+      $hero->real_name = $request->get('real_name');
+      $hero->origin_description = $request->get('origin_description');
       $hero->superpowers = $request->get('superpowers');
       $hero->catch_phrase = $request->get('catch_phrase');
       $hero->save();
