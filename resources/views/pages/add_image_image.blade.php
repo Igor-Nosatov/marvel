@@ -21,8 +21,18 @@
          <div class="p-2">
             <button type="submit" class="btn btn-success">Add</button>
          </div>
+         <div class="p-2">
+         <form action= "{{ route('hero.destroy', $heroes->id) }}" method= "post">
+                  @csrf
+                  {{ method_field('DELETE') }}
+             <button type= "submit" class="btn  btn-danger">  
+                 Delete
+            </button>
+        </form>
+        </div>
     </div>
     </form>
+    
   </div>
  </div>
 </div>
